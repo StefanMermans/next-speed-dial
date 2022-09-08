@@ -3,13 +3,14 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import background from "../background-compressed.jpg";
 
-const NoSSRSpeedDial = dynamic(() => import('../components/SpeedDial/SpeedDial'), {
-  ssr: false,
-})
-
+const NoSSRSpeedDial = dynamic(
+  () => import("../components/SpeedDial/SpeedDial"),
+  {
+    ssr: false,
+  }
+);
 
 const Index: NextPage = () => {
-
   return (
     <main
       className="w-screen h-screen flex flex-col bg-no-repeat bg-center bg-cover overflow-hidden"

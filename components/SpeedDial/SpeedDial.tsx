@@ -1,34 +1,6 @@
-import { useEffect, useState } from "react";
+import useWindowResize from "../../hooks/useWindowSize";
 import Clock from "../Clock/Clock";
 import { BOOKMARK_WIDTH, SiteList } from "./SiteList";
-
-type Props = {};
-
-function getWindowSize() {
-  if (typeof window === "undefined") {
-    return [1920, 1080];
-  }
-
-  return [window.innerWidth, window.innerHeight];
-}
-
-function useWindowResize() {
-  const [size, setSize] = useState(getWindowSize);
-
-  useEffect(() => {
-    function resizeListener() {
-      setSize(getWindowSize());
-    }
-
-    window.addEventListener("resize", resizeListener);
-
-    return () => {
-      window.removeEventListener("resize", resizeListener);
-    };
-  }, []);
-
-  return size;
-}
 
 const usePadding = () => {
   const [windowWidth] = useWindowResize();
@@ -37,7 +9,7 @@ const usePadding = () => {
   return (windowWidth - itemCount * BOOKMARK_WIDTH) / 2;
 };
 
-export default function SpeedDial(props: Props) {
+export default function SpeedDial() {
   const padding = usePadding();
 
   return (

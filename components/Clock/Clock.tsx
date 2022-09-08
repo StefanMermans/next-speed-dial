@@ -1,13 +1,13 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from "react";
 
-const TimeFormatter = Intl.DateTimeFormat('nl', {
-  timeStyle: 'short'
+const TimeFormatter = Intl.DateTimeFormat("nl", {
+  timeStyle: "short",
 });
 
-const DateFormatter = Intl.DateTimeFormat('nl', {
-  month: 'long',
-  day: 'numeric',
-  weekday: 'long'
+const DateFormatter = Intl.DateTimeFormat("nl", {
+  month: "long",
+  day: "numeric",
+  weekday: "long",
 });
 
 export default function Clock() {
@@ -15,7 +15,7 @@ export default function Clock() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setDate(date => {
+      setDate((date) => {
         const newDate = new Date();
 
         if (newDate.getUTCMinutes() === date.getUTCMinutes()) {
@@ -31,12 +31,12 @@ export default function Clock() {
     };
   }, []);
 
-  console.log('render');
+  console.log("render");
 
   return (
-    <div className='text-white flex-shrink-0 flex flex-col justify-end'>
-      <div className='text-9xl font-thin'>{TimeFormatter.format(date)}</div>
-      <div className='text-4xl font-light'>{DateFormatter.format(date)}</div>
+    <div className="text-white flex-shrink-0 flex flex-col justify-end">
+      <div className="text-9xl font-thin">{TimeFormatter.format(date)}</div>
+      <div className="text-4xl font-light">{DateFormatter.format(date)}</div>
     </div>
   );
 }
