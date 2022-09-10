@@ -15,6 +15,7 @@ jobs:
     - name: Yarn
       run: npm i -g yarn
     - name: LS
+      working-directory: ./pages
       run: ls -a
     # - name: Install
       # run: yarn i
