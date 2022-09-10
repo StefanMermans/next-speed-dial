@@ -12,6 +12,7 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.VPS_RSA }} 
+        known_hosts: ${{ secrets.VPS_HOST }}
     - name: checkout
       uses: actions/checkout@v1
     - name: Setup node.js environment
