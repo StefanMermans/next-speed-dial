@@ -17,10 +17,12 @@ jobs:
         node-version: 16.x
     - name: Yarn
       run: npm i -g yarn
-    - name: Install
-      run: yarn i
-    - name: Build
-      run: yarn build
+    - name: LS
+      run: ls
+    # - name: Install
+      # run: yarn i
+    # - name: Build
+      # run: yarn build
       
         
     
