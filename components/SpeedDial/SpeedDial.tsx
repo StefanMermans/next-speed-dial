@@ -1,6 +1,12 @@
 import useWindowResize from "../../hooks/useWindowSize";
 import Clock from "../Clock/Clock";
+import type Show from "./Shows/Show";
+import SpeedDialShows from "./Shows/SpeedDialShows";
 import { BOOKMARK_WIDTH, SiteList } from "./SiteList";
+
+type Props = {
+  shows: Show[];
+};
 
 const usePadding = () => {
   const [windowWidth] = useWindowResize();
@@ -9,7 +15,7 @@ const usePadding = () => {
   return (windowWidth - itemCount * BOOKMARK_WIDTH) / 2;
 };
 
-export default function SpeedDial() {
+export default function SpeedDial(props: Props) {
   const padding = usePadding();
 
   return (
@@ -31,7 +37,7 @@ export default function SpeedDial() {
         }}
       >
         <Clock />
-        {/* <SpeedDialShows /> */}
+        <SpeedDialShows shows={props.shows} />
       </div>
     </>
   );

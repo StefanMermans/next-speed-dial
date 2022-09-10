@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import type { Site as SiteType } from "../../hooks/useSiteList";
 
@@ -12,9 +11,10 @@ export const Site = (props: Props) => {
 
   return (
     <div className="p-2">
-      <Link href={props.site.url}>
-        <div
-          className="
+      <a
+        href={props.site.url}
+        className="
+            block
             cursor-pointer
             rounded-2xl
             w-24
@@ -26,17 +26,16 @@ export const Site = (props: Props) => {
             transition-transform
             shadow-md
             hover:shadow-xl"
-          style={{ backgroundColor }}
-        >
-          <Image
-            src={`/${props.site.icon}`}
-            layout="responsive"
-            alt="site icon"
-            width={1}
-            height={1}
-          />
-        </div>
-      </Link>
+        style={{ backgroundColor }}
+      >
+        <Image
+          src={`/${props.site.icon}`}
+          layout="responsive"
+          alt="site icon"
+          width={1}
+          height={1}
+        />
+      </a>
     </div>
   );
 };
