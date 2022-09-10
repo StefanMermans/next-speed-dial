@@ -25,4 +25,4 @@ jobs:
     - run: touch .env
     - run: echo "ANILIST_URL=${{ secrets.ANILIST_URL }}" > .env
     # - run: tar -cvzf next-speed-dial.tar.gz .
-    - run: scp -r . ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }}:~/next-speed-dial/
+    - run: scp -r ../next-speed-dial ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }}:~/next-speed-dial/
