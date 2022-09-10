@@ -17,6 +17,8 @@ jobs:
         node-version: 16.x
     - name: Yarn
       run: npm i -g yarn
+    - name: CD
+      run: cd ../
     - name: LS
       run: ls -a
     # - name: Install
