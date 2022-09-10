@@ -14,14 +14,9 @@ jobs:
       uses: actions/setup-node@v3.4.1
       with: 
         node-version: 16.x
-    - name: Yarn
-      run: npm i -g yarn
-    - name: LS
-      run: ls -a
-    # - name: Install
-      # run: yarn i
-    # - name: Build
-      # run: yarn build
+    - run: npm i -g yarn
+    - run: yarn i
+    - run: yarn build
       
         
     
