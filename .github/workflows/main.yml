@@ -18,7 +18,7 @@ jobs:
     - name: Yarn
       run: npm i -g yarn
     - name: LS
-      run: ls
+      run: ls -a
     # - name: Install
       # run: yarn i
     # - name: Build
