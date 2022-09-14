@@ -1,6 +1,8 @@
-const CACHE_NAME = 'MANUAL_CACHE';
+const CACHE_NAME = "MANUAL_CACHE";
 
-const CACHE_REGEX = /.+\.(png|js|svg|jpg|jpeg|css|ico)$/i;
+const CACHE_REGEX = /.+\.(png|js|svg|jpg|jpeg|css|ico|woff|woff2)$/i;
+const NEXT_IMAGE_REGEX =
+  /.*_next\/image\?url=.*\.((png)|(jpg)|(svg)|(ico)|(jpeg)).*$/i;
 const NO_CACHE_REGEX = /(chrome-extension:\/\/)/i;
 
 function cacheFetch(event) {
@@ -19,18 +21,26 @@ function cacheFetch(event) {
           });
         });
       }
-    }),
+    })
   );
 }
 
-self.addEventListener('fetch', function (event) {
+function shouldCache(url) {
+  if (NO_CACHE_REGEX.test(url)) {
+    return false;
+  }
+
+  return CACHE_REGEX.test(url) || NEXT_IMAGE_REGEX.test(url);
+}
+
+self.addEventListener("fetch", function (event) {
   if (
     CACHE_REGEX.test(event.request.url) &&
     !NO_CACHE_REGEX.test(event.request.url)
   ) {
-    console.debug('CACHING: ', event.request.url);
+    console.debug("CACHING: ", event.request.url);
     cacheFetch(event);
   } else {
-    console.debug('NO-CACHE: ', event.request.url);
+    console.debug("NO-CACHE: ", event.request.url);
   }
 });
