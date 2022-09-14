@@ -1,10 +1,9 @@
-import { gql } from "graphql-request";
 import type { GetServerSideProps, NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import { anilistClient } from "../backend/anilistClient";
 import background from "../background-compressed.jpg";
 import Show, { AnilistData } from "../components/SpeedDial/Shows/Show";
+import useServiceWorker from "../hooks/userServiceWorker";
 
 const NoSSRSpeedDial = dynamic(
   () => import("../components/SpeedDial/SpeedDial"),
@@ -18,7 +17,7 @@ type Props = {
 };
 
 export const Index: NextPage<Props> = ({ shows }: Props) => {
-  console.log("shows", shows);
+  useServiceWorker();
 
   return (
     <main
