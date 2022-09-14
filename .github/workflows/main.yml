@@ -26,3 +26,5 @@ jobs:
     - run: echo "ANILIST_URL=${{ secrets.ANILIST_URL }}" > .env
     - run: cd ../ && tar -cvzf next-speed-dial.tar.gz ./next-speed-dial/
     - run: cd ../ && scp -r ./next-speed-dial.tar.gz ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }}:~/next-speed-dial.tar.gz
+    - run: ssh ${{ secrets.VPS_HOST }} 'tar -xf next-speed-dial.tar.gz'
+    - run: ssh ${{ secrets.VPS_HOST }} 'ls -a'
