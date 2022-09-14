@@ -24,7 +24,5 @@ jobs:
     - run: yarn build
     - run: touch .env
     - run: echo "ANILIST_URL=${{ secrets.ANILIST_URL }}" > .env
-    - run: cd ../
-    - run: ls
-    - run: tar -cvzf next-speed-dial.tar.gz ./next-speed-dial/
-    - run: scp -r ./next-speed-dial ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }}:~/next-speed-dial/
+    - run: cd ../ && tar -cvzf next-speed-dial.tar.gz ./next-speed-dial/
+    - run: cd ../ && scp -r ./next-speed-dial.tar.gz ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }}:~/next-speed-dial.tar.gz
