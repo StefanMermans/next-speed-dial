@@ -1,7 +1,8 @@
 const CACHE_NAME = "MANUAL_CACHE";
 
 const CACHE_REGEX = /.+\.(png|js|svg|jpg|jpeg|css|ico|woff|woff2)$/i;
-const NEXT_IMAGE_REGEX = /.*_next\/image\?url=.*$/i;
+const NEXT_IMAGE_REGEX =
+  /.*_next\/image\?url=.*\.((png)|(jpg)|(svg)|(ico)|(jpeg)).*$/i;
 const NO_CACHE_REGEX = /(chrome-extension:\/\/)/i;
 
 function cacheFetch(event) {
@@ -29,14 +30,11 @@ function shouldCache(url) {
     return false;
   }
 
-  return CACHE_REGEX.test(url) || url.includes("_next/image?url=");
+  return CACHE_REGEX.test(url) || NEXT_IMAGE_REGEX.test(url);
 }
 
 self.addEventListener("fetch", function (event) {
-  if (
-    CACHE_REGEX.test(event.request.url) &&
-    !NO_CACHE_REGEX.test(event.request.url)
-  ) {
+  if (shouldCache(event.request.url)) {
     console.debug("CACHING: ", event.request.url);
     cacheFetch(event);
   } else {
