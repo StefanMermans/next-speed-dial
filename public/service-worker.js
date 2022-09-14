@@ -29,7 +29,7 @@ function shouldCache(url) {
     return false;
   }
 
-  return CACHE_REGEX.test(url) || NEXT_IMAGE_REGEX.test(url);
+  return CACHE_REGEX.test(url) || url.includes("_next/image?url=");
 }
 
 self.addEventListener("fetch", function (event) {
