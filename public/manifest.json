@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "background_color": "#27272a",
+  "description": "Personal speed dial",
+  "display": "browser",
+  "lang": "English",
+  "name": "Next speed dial",
+  "short_name": "Speed dial",
+  "start_url": "/",
+  "theme_color": "#27272a"
+}
