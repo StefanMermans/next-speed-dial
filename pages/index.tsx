@@ -40,6 +40,8 @@ export const Index: NextPage<Props> = ({ shows }: Props) => {
 export default Index;
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  return { props: {shows: []}};
+
   const response = await fetch(process.env.ANILIST_URL ?? "", {
     method: "POST",
     headers: {

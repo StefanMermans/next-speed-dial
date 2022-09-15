@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    justify-content: center;
+    row-gap: 0;
+    grid-template-rows: repeat(auto-fill, 112px);
+    grid-template-columns: repeat(auto-fill, 112px);
+    height: 100vh !important;
+}
+
+.shows {
+    background-color: rebeccapurple;
+    width: 100%;
+    grid-column: span 4;
+    grid-row: span 4;
+    grid-row-end: -1;
+    grid-column-end:  -1;
+}

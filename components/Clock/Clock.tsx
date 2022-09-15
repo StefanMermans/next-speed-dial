@@ -1,4 +1,6 @@
+import classNames from "classnames";
 import { useEffect, useState } from "react";
+import styles from "./clock.module.css";
 
 const TimeFormatter = Intl.DateTimeFormat("nl", {
   timeStyle: "short",
@@ -34,7 +36,12 @@ export default function Clock() {
   console.log("render");
 
   return (
-    <div className="text-white flex-shrink-0 flex flex-col justify-end">
+    <div
+      className={classNames(
+        styles.clock,
+        "text-white flex-shrink-0 flex flex-col justify-end"
+      )}
+    >
       <div className="text-9xl font-thin">{TimeFormatter.format(date)}</div>
       <div className="text-4xl font-light">{DateFormatter.format(date)}</div>
     </div>
