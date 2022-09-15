@@ -1,7 +1,0 @@
-.clock {
-    width: 100%;
-    justify-self: end;
-    grid-column: span 4;
-    grid-row: span 2;
-    grid-row-end: -1;
-}
