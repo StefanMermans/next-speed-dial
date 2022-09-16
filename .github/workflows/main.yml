@@ -21,9 +21,9 @@ jobs:
         node-version: 16.x
     - run: npm i -g yarn
     - run: yarn
-    - run: yarn build
     - run: touch .env
     - run: echo "NEXT_PUBLIC_ANILIST_URL=${{ secrets.ANILIST_URL }}" > .env
+    - run: yarn build
     - run: cd ../ && tar -czf next-speed-dial.tar.gz ./next-speed-dial/
     - run: ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} 'rm -rf ~/next-speed-dial/'
     - run: ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} 'pm2 stop next-speed-dial'
