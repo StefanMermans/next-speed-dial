@@ -43,7 +43,7 @@ export type IMediaData = {
   coverImage: ICoverImage;
   airingSchedule: IAiringSchedule;
   nextAiringEpisode: INextAiringEpisode | null;
-  status: "FINISHED" | "RELEASING" | "NOT_YET_RELEASED";
+  status: 'FINISHED' | 'RELEASING' | 'NOT_YET_RELEASED';
 };
 
 export type Show = {

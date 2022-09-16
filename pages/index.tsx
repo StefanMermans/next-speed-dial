@@ -1,17 +1,14 @@
-import type { GetServerSideProps, NextPage } from "next";
-import Head from "next/head";
-import background from "../background-compressed.jpg";
-import Clock from "../components/Clock/Clock";
-import { SiteList } from "../components/SpeedDial/SiteList";
-import cn from "classnames";
+import type { GetServerSideProps, NextPage } from 'next';
+import Head from 'next/head';
+import background from '../background-compressed.jpg';
+import Clock from '../components/Clock/Clock';
+import { SiteList } from '../components/SpeedDial/SiteList';
+import cn from 'classnames';
 
-const SpeedDialShowsNoSSR = dynamic(
-  () => import("../components/SpeedDial/Shows/SpeedDialShows"),
-  { ssr: false }
-);
+const SpeedDialShowsNoSSR = dynamic(() => import('../components/SpeedDial/Shows/SpeedDialShows'), { ssr: false });
 
-import styles from "../css/SpeedDial.module.css";
-import dynamic from "next/dynamic";
+import styles from '../css/SpeedDial.module.css';
+import dynamic from 'next/dynamic';
 
 export const Index: NextPage = () => {
   return (
@@ -19,7 +16,7 @@ export const Index: NextPage = () => {
       className="w-screen h-screen flex flex-col bg-no-repeat bg-center bg-cover overflow-x-hidden"
       style={{
         backgroundImage: `url(${background.src})`,
-        boxShadow: "inset 0px 0px 200px 16px rgba(0,0,0,0.75)",
+        boxShadow: 'inset 0px 0px 200px 16px rgba(0,0,0,0.75)',
       }}
     >
       <Head>

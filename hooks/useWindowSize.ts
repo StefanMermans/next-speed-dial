@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 function getWindowSize() {
-  if (typeof window === "undefined") {
+  if (typeof window === 'undefined') {
     return [1920, 1080];
   }
 
@@ -16,10 +16,10 @@ export default function useWindowResize() {
       setSize(getWindowSize());
     }
 
-    window.addEventListener("resize", resizeListener);
+    window.addEventListener('resize', resizeListener);
 
     return () => {
-      window.removeEventListener("resize", resizeListener);
+      window.removeEventListener('resize', resizeListener);
     };
   }, []);
 

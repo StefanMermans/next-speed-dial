@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import Show from "../Show";
+import React from 'react';
+import Image from 'next/image';
+import Show from '../Show';
 
 type props = {
   show: Show;

@@ -1,13 +1,13 @@
-import Image from "next/image";
-import React from "react";
-import type { Site as SiteType } from "../../hooks/useSiteList";
+import React from 'react';
+import Image from 'next/image';
+import type { Site as SiteType } from '../../hooks/useSiteList';
 
 type Props = {
   site: SiteType;
 };
 
 export const Site = (props: Props) => {
-  const backgroundColor = props.site.backgroundColor || "white";
+  const backgroundColor = props.site.backgroundColor || 'white';
 
   return (
     <a
@@ -27,13 +27,7 @@ export const Site = (props: Props) => {
         hover:shadow-xl"
       style={{ backgroundColor }}
     >
-      <Image
-        src={`/${props.site.icon}`}
-        layout="responsive"
-        alt="site icon"
-        width={1}
-        height={1}
-      />
+      <Image src={`/${props.site.icon}`} layout="responsive" alt="site icon" width={1} height={1} />
     </a>
   );
 };

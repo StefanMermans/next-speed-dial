@@ -1,12 +1,12 @@
-import { Suspense } from "react";
-import useShows from "../../../hooks/useShows";
-import { ShowItem } from "./ShowItem/ShowItem";
+import { Suspense } from 'react';
+import useShows from '../../../hooks/useShows';
+import { ShowItem } from './ShowItem/ShowItem';
 
 export default function SpeedDialShows() {
   const shows = useShows(4);
 
   const handleShowMoreShows = () => {
-    console.log("TODO");
+    console.log('TODO');
   };
 
   return (
@@ -18,10 +18,7 @@ export default function SpeedDialShows() {
               <ShowItem key={show.media.id} show={show} />
             ))}
           </div>
-          <div
-            className="flex justify-center cursor-pointer"
-            onClick={handleShowMoreShows}
-          >
+          <div className="flex justify-center cursor-pointer" onClick={handleShowMoreShows}>
             Show more
           </div>
         </div>

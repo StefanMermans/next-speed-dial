@@ -1,15 +1,15 @@
-import { AnilistData } from "../../components/SpeedDial/Shows/Show";
+import { AnilistData } from '../../components/SpeedDial/Shows/Show';
 
 export async function fetchShows() {
-  const response = await fetch(process.env.NEXT_PUBLIC_ANILIST_URL ?? "", {
-    method: "POST",
+  const response = await fetch(process.env.NEXT_PUBLIC_ANILIST_URL ?? '', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
     },
     body: JSON.stringify({
       variables: {
-        name: "Skyflyer97",
+        name: 'Skyflyer97',
       },
       query: `
         query ($name: String!) {
@@ -64,9 +64,5 @@ export async function fetchShows() {
     }),
   });
   const data: AnilistData = await response.json();
-  return (
-    data.data.MediaListCollection.lists.find(
-      (list: any) => list.name === "Watching"
-    )?.entries ?? []
-  );
+  return data.data.MediaListCollection.lists.find((list: any) => list.name === 'Watching')?.entries ?? [];
 }

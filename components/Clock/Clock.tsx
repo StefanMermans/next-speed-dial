@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-const TimeFormatter = Intl.DateTimeFormat("nl", {
-  timeStyle: "short",
+const TimeFormatter = Intl.DateTimeFormat('nl', {
+  timeStyle: 'short',
 });
 
-const DateFormatter = Intl.DateTimeFormat("nl", {
-  month: "long",
-  day: "numeric",
-  weekday: "long",
+const DateFormatter = Intl.DateTimeFormat('nl', {
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
 });
 
 export default function Clock() {

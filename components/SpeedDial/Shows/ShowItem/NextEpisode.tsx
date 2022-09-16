@@ -1,5 +1,6 @@
-import React, { useMemo } from "react";
-import ShowModel from "../../../../models/ShowModel";
+import React, { useMemo } from 'react';
+
+import ShowModel from '../../../../models/ShowModel';
 
 interface props {
   show: ShowModel;

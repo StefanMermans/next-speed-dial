@@ -1,4 +1,4 @@
-import SITES from "./sites";
+import SITES from './sites';
 
 export type Site = {
   name: string;

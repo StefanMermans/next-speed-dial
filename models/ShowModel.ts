@@ -1,8 +1,4 @@
-import type {
-  IAiringScheduleEpisode,
-  IMediaData,
-  Show,
-} from "../components/SpeedDial/Shows/Show";
+import type { IAiringScheduleEpisode, IMediaData, Show } from '../components/SpeedDial/Shows/Show';
 
 export default class ShowModel implements Show {
   media: IMediaData;
@@ -33,9 +29,7 @@ export default class ShowModel implements Show {
     const [nextEpisode] = this.getNextEpisode();
 
     if (nextEpisode && nextEpisode.timeUntilAiring > 0) {
-      return this.formatNextEpTime(
-        ...this.secondsToDaysHours(nextEpisode.timeUntilAiring)
-      );
+      return this.formatNextEpTime(...this.secondsToDaysHours(nextEpisode.timeUntilAiring));
     } else {
       const eps = this.airedEpisodes();
 
@@ -44,11 +38,7 @@ export default class ShowModel implements Show {
   }
 
   getNotYetReleasedContent(): string {
-    return this.formatNextEpTime(
-      ...this.secondsToDaysHours(
-        this.media.nextAiringEpisode?.timeUntilAiring ?? 0
-      )
-    );
+    return this.formatNextEpTime(...this.secondsToDaysHours(this.media.nextAiringEpisode?.timeUntilAiring ?? 0));
   }
 
   getFinishedContent(): string {
@@ -61,11 +51,11 @@ export default class ShowModel implements Show {
 
   formatContent(): string {
     switch (this.media.status) {
-      case "FINISHED":
+      case 'FINISHED':
         return this.getFinishedContent();
-      case "RELEASING":
+      case 'RELEASING':
         return this.getReleasingContent();
-      case "NOT_YET_RELEASED":
+      case 'NOT_YET_RELEASED':
         return this.getNotYetReleasedContent();
       default:
         return `Unknown media status: ${this.media.status}`;
@@ -74,9 +64,9 @@ export default class ShowModel implements Show {
 
   episodesToWatch(): number {
     switch (this.media.status) {
-      case "RELEASING":
+      case 'RELEASING':
         return this.airedEpisodes().length - this.progress;
-      case "FINISHED":
+      case 'FINISHED':
       default:
         return this.media.episodes - this.progress;
     }
@@ -105,8 +95,6 @@ export default class ShowModel implements Show {
   }
 
   airedEpisodes(): IAiringScheduleEpisode[] {
-    return this.media.airingSchedule.nodes.filter(
-      (scheduled: any) => scheduled.timeUntilAiring < 0
-    );
+    return this.media.airingSchedule.nodes.filter((scheduled: any) => scheduled.timeUntilAiring < 0);
   }
 }

@@ -1,6 +1,6 @@
-import React from "react";
-import useSiteList from "../../hooks/useSiteList";
-import { Site } from "./Site";
+import React from 'react';
+import { Site } from './Site';
+import useSiteList from '../../hooks/useSiteList';
 
 export const BOOKMARK_WIDTH = 96 + 16;
 
