@@ -1,7 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
-import { useMemo } from "react";
-import { fetchShows } from "../api/shows/fetchShows";
-import ShowModel from "../models/ShowModel";
+import { useQuery } from '@tanstack/react-query';
+import { useMemo } from 'react';
+import { fetchShows } from '../api/shows/fetchShows';
+import ShowModel from '../models/ShowModel';
 
 function showSort(showA: ShowModel, showB: ShowModel) {
   const aEps = showA.episodesToWatch();
@@ -19,7 +19,7 @@ function showSort(showA: ShowModel, showB: ShowModel) {
 }
 
 export default function useShows(count?: number) {
-  const showQuery = useQuery(["shows"], fetchShows, {
+  const showQuery = useQuery(['shows'], fetchShows, {
     select: (shows) => {
       return shows.map((show) => new ShowModel(show)).sort(showSort);
     },
