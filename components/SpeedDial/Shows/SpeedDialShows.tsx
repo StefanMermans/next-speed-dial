@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Suspense } from 'react';
 import useShows from '../../../hooks/useShows';
 import { ShowItem } from './ShowItem/ShowItem';
@@ -18,9 +19,11 @@ export default function SpeedDialShows() {
               <ShowItem key={show.media.id} show={show} />
             ))}
           </div>
-          <div className="flex justify-center cursor-pointer" onClick={handleShowMoreShows}>
-            Show more
-          </div>
+          <Link href="/shows">
+            <div className="flex justify-center cursor-pointer" onClick={handleShowMoreShows}>
+              Show more
+            </div>
+          </Link>
         </div>
       )}
     </Suspense>

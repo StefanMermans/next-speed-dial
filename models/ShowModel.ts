@@ -65,6 +65,7 @@ export default class ShowModel implements Show {
   episodesToWatch(): number {
     switch (this.media.status) {
       case 'RELEASING':
+      case 'NOT_YET_RELEASED':
         return this.airedEpisodes().length - this.progress;
       case 'FINISHED':
       default:
