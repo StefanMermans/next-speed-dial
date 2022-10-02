@@ -111,7 +111,7 @@ const SITES = [
   {
     name: 'Subs please',
     url: 'https://subsplease.org/',
-    icon: 'images/lucy-min.png',
+    icon: 'images/Lucy-min.png',
     backgroundColor: '#3b4a65',
   },
 ];
