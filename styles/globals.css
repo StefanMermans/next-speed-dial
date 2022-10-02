@@ -30,3 +30,7 @@ body {
     text-gray-200
     bg-zinc-900
 }
+
+#__next {
+  overflow: hidden;
+}

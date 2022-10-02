@@ -39,6 +39,7 @@ export type IMediaData = {
   id: number;
   type: string;
   title: ITitle;
+  siteUrl: string;
   episodes: number;
   coverImage: ICoverImage;
   airingSchedule: IAiringSchedule;

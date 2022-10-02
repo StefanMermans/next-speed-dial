@@ -22,6 +22,7 @@ export async function fetchShows() {
               entries {
                 progress
                 media {
+                  siteUrl
                   type
                   id
                   coverImage {
