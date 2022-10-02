@@ -13,7 +13,7 @@ import dynamic from 'next/dynamic';
 export const Index: NextPage = () => {
   return (
     <main
-      className="w-screen h-screen flex flex-col bg-no-repeat bg-center bg-cover overflow-x-hidden"
+      className='w-screen h-screen flex flex-col bg-no-repeat bg-center bg-cover overflow-x-hidden'
       style={{
         backgroundImage: `url(${background.src})`,
         boxShadow: 'inset 0px 0px 200px 16px rgba(0,0,0,0.75)',
@@ -21,15 +21,15 @@ export const Index: NextPage = () => {
     >
       <Head>
         <title>Next speed dial</title>
-        <meta name="description" content="The next speed dial." />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='The next speed dial.' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className="p-4 h-full flex flex-col justify-between">
+      <div className='p-4 h-full flex flex-col justify-between'>
         <div className={cn(styles.grid)}>
           <SiteList />
         </div>
         <div className={styles.footer}>
-          <div className="w-full flex justify-between col-span-full">
+          <div className='w-full flex justify-between col-span-full'>
             <Clock />
             <SpeedDialShowsNoSSR />
           </div>

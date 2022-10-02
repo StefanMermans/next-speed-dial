@@ -21,7 +21,7 @@ export const NextEpisode: React.FC<props> = ({ show }) => {
   const progressText = useProgressText(show);
 
   return (
-    <div className="flex flex-col items-end">
+    <div className='flex flex-col items-end'>
       <div>{progressText}</div>
       <div>{content}</div>
     </div>

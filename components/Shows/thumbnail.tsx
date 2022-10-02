@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { useMemo } from 'react';
 import ShowModel from '../../models/ShowModel';
-import { NextEpisode } from '../SpeedDial/Shows/ShowItem/NextEpisode';
 
 type props = {
   show: ShowModel;

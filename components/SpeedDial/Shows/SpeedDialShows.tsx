@@ -13,14 +13,14 @@ export default function SpeedDialShows() {
   return (
     <Suspense>
       {shows && (
-        <div className="flex flex-col transition-transform">
-          <div className="bg-zinc-800 rounded overflow-hidden">
+        <div className='flex flex-col transition-transform'>
+          <div className='bg-zinc-800 rounded overflow-hidden'>
             {shows.map((show) => (
               <ShowItem key={show.media.id} show={show} />
             ))}
           </div>
-          <Link href="/shows">
-            <div className="flex justify-center cursor-pointer" onClick={handleShowMoreShows}>
+          <Link href='/shows'>
+            <div className='flex justify-center cursor-pointer' onClick={handleShowMoreShows}>
               Show more
             </div>
           </Link>

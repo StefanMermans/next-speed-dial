@@ -8,10 +8,10 @@ type props = {
 
 export const ThumbNail: React.FC<props> = ({ show }) => {
   return (
-    <div className="h-8 w-16">
+    <div className='h-8 w-16'>
       <Image
-        layout="responsive"
-        objectFit="cover"
+        layout='responsive'
+        objectFit='cover'
         width={1}
         height={2}
         alt={show.media.title.romaji}

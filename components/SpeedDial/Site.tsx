@@ -12,7 +12,7 @@ export const Site = (props: Props) => {
   return (
     <a
       href={props.site.url}
-      className="
+      className='
         block
         cursor-pointer
         rounded-2xl
@@ -24,10 +24,10 @@ export const Site = (props: Props) => {
         hover:scale-110
         transition-transform
         shadow-md
-        hover:shadow-xl"
+        hover:shadow-xl'
       style={{ backgroundColor }}
     >
-      <Image src={`/${props.site.icon}`} layout="responsive" alt="site icon" width={1} height={1} />
+      <Image src={`/${props.site.icon}`} layout='responsive' alt='site icon' width={1} height={1} />
     </a>
   );
 };
