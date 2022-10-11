@@ -1,4 +1,6 @@
-const SITES = [
+import { Site } from './useSiteList';
+
+const SITES: Site[] = [
   {
     name: 'youtube',
     url: 'https://youtube.com',
@@ -35,17 +37,12 @@ const SITES = [
   {
     name: 'Reddit',
     url: 'https://www.reddit.com/',
-    icon: 'images/reddit.png',
+    icon: 'images/reddit-min.png',
   },
   {
     name: 'GitLab',
     url: 'https://gitlab.com/',
     icon: 'images/gitlab.png',
-  },
-  {
-    name: 'Sam',
-    url: 'https://sam.avans.nl/student/',
-    icon: 'images/avans.png',
   },
   {
     name: 'Twitch',
@@ -56,12 +53,12 @@ const SITES = [
   {
     name: 'WhatsApp',
     url: 'https://web.whatsapp.com/',
-    icon: 'images/whatsapp.png',
+    icon: 'images/whatsapp-min.png',
   },
   {
     name: 'Gmail',
     url: 'https://mail.google.com/',
-    icon: 'images/gmail.png',
+    icon: 'images/gmail-min.png',
   },
   {
     name: 'GoogleDrive',
@@ -111,8 +108,14 @@ const SITES = [
   {
     name: 'Subs please',
     url: 'https://subsplease.org/',
-    icon: 'images/Lucy-min.png',
-    backgroundColor: '#3b4a65',
+    icon: 'images/iseria.png',
+    backgroundColor: '#fbf5f0',
+  },
+  {
+    name: 'Pulse',
+    url: 'https://pulse.scrumble.nl/',
+    icon: 'images/pulse-min.png',
+    backgroundColor: '#3f4852',
   },
 ];
 

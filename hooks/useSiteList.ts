@@ -5,6 +5,7 @@ export type Site = {
   url: string;
   icon: string;
   backgroundColor?: string;
+  noPadding?: boolean;
 };
 
 export default function useSiteList(): Site[] {
