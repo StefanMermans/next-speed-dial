@@ -5,14 +5,14 @@ const nextConfig = {
   images: {
     domains: ['s4.anilist.co'],
   },
-  
+
   async headers() {
     return [
       {
         source: '/',
         headers: [
           {
-            key: 'x-frame-options',
+            key: 'X-Frame-Options',
             value: 'SAMEORIGIN',
           },
           {
