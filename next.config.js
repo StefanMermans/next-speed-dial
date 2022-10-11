@@ -10,6 +10,10 @@ const nextConfig = {
       key: 'x-frame-options',
       value: 'ALLOW-FROM=chrome://new-tab-page',
     },
+    {
+      key: 'test-header',
+      value: 'Test-value',
+    },
   ],
 };
 
