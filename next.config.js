@@ -5,6 +5,7 @@ const nextConfig = {
   images: {
     domains: ['s4.anilist.co'],
   },
+  
   async headers() {
     return [
       {
@@ -12,7 +13,7 @@ const nextConfig = {
         headers: [
           {
             key: 'x-frame-options',
-            value: 'ALLOW-FROM=chrome://new-tab-page',
+            value: 'SAMEORIGIN',
           },
           {
             key: 'test-header',
