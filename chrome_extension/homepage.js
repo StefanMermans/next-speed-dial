@@ -3,4 +3,4 @@
 
 // setInterval(() => {
 //   console.log("Interval");
-// }, 1000)
+// }, 1000);

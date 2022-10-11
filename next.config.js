@@ -7,7 +7,7 @@ const nextConfig = {
   },
   headers: [
     {
-      key: 'X-Frame-Options',
+      key: 'x-frame-options',
       value: 'ALLOW-FROM=chrome://new-tab-page',
     },
   ],
