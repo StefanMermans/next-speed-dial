@@ -11,6 +11,13 @@ import styles from '../css/SpeedDial.module.css';
 import dynamic from 'next/dynamic';
 
 export const Index: NextPage = () => {
+  const handleClick = async () => {
+    const response = await fetch('/api/test');
+    const body = await response.text();
+
+    console.log(body);
+  }
+
   return (
     <main
       className='w-screen h-screen flex flex-col bg-no-repeat bg-center bg-cover overflow-x-hidden'
@@ -24,6 +31,9 @@ export const Index: NextPage = () => {
         <meta name='description' content='The next speed dial.' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <button onClick={handleClick}>
+        Test
+      </button>
       <div className='p-4 h-full flex flex-col justify-between'>
         <div className={cn(styles.grid)}>
           <SiteList />

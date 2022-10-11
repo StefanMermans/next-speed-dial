@@ -1,0 +1,13 @@
+{
+  "name": "Next speed dial",
+  "description": "Next speed dial new tab page",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "homepage.html"
+  }
+}
