@@ -5,16 +5,23 @@ const nextConfig = {
   images: {
     domains: ['s4.anilist.co'],
   },
-  headers: [
-    {
-      key: 'x-frame-options',
-      value: 'ALLOW-FROM=chrome://new-tab-page',
-    },
-    {
-      key: 'test-header',
-      value: 'Test-value',
-    },
-  ],
+  async headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'x-frame-options',
+            value: 'ALLOW-FROM=chrome://new-tab-page',
+          },
+          {
+            key: 'test-header',
+            value: 'Test-value',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
