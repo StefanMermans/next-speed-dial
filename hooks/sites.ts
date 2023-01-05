@@ -117,6 +117,18 @@ const SITES: Site[] = [
     icon: 'images/pulse-min.png',
     backgroundColor: '#3f4852',
   },
+  {
+    name: 'Font awesome',
+    url: 'https://fontawesome.com',
+    icon: 'images/font-awesome.png',
+    backgroundColor: '#528cd7',
+  },
+  {
+    name: 'Jenkins',
+    url: 'https://jenkins.scrumble.customer.cloud.nl',
+    icon: 'images/jenkins.png',
+    backgroundColor: 'black',
+  },
 ];
 
 export default SITES;
