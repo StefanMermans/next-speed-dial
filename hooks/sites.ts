@@ -129,6 +129,12 @@ const SITES: Site[] = [
     icon: 'images/jenkins.png',
     backgroundColor: 'black',
   },
+  {
+    name: 'RegExr',
+    url: 'https://regexr.com',
+    icon: 'images/regexr-logo.png',
+    backgroundColor: '#70b1e1',
+  },
 ];
 
 export default SITES;
