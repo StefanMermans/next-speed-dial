@@ -9,15 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^4.3.1",
+    "@prisma/client": "^4.11.0",
     "@tanstack/react-query": "^4.3.4",
+    "@tanstack/react-query-devtools": "^4.23.0",
     "@types/chrome": "^0.0.197",
+    "@types/jsonwebtoken": "^9.0.1",
     "classnames": "^2.3.1",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
+    "jsonwebtoken": "^9.0.0",
     "next": "12.2.5",
     "next-auth": "^4.10.3",
-    "prisma": "^4.3.1",
+    "prisma": "^4.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

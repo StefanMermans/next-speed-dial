@@ -40,8 +40,3 @@ export const Index: NextPage = () => {
 };
 
 export default Index;
-
-// export const getStaticProps = () => ({props: {}});
-// export const getServerSideProps: GetServerSideProps = async () => {
-  // return { props: {} };
-// };
