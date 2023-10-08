@@ -1,11 +1,11 @@
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
 import background from '../background-compressed.jpg';
-import Clock from '../components/Clock/Clock';
 import { SiteList } from '../components/SpeedDial/SiteList';
 import cn from 'classnames';
 
 const SpeedDialShowsNoSSR = dynamic(() => import('../components/SpeedDial/Shows/SpeedDialShows'), { ssr: false });
+const Clock = dynamic(() => import('../components/Clock/Clock'), { ssr: false });
 
 import styles from '../css/SpeedDial.module.css';
 import dynamic from 'next/dynamic';
