@@ -14,7 +14,7 @@ export default function SpeedDialShows() {
     <Suspense>
       {shows && (
         <div className='flex flex-col transition-transform'>
-          <div className='bg-zinc-800 rounded overflow-hidden'>
+          <div className='bg-zinc-800/40 rounded-lg backdrop-blur-xl overflow-hidden border border-gray-300/20'>
             {shows.map((show) => (
               <ShowItem key={show.media.id} show={show} />
             ))}

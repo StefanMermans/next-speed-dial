@@ -22,7 +22,7 @@ jobs:
     - run: npm i -g yarn
     - run: yarn
     - run: touch .env
-    - run: echo "NEXT_PUBLIC_ANILIST_URL=${{ secrets.ANILIST_URL }}" > .env
+    - run: echo "${{ secrets.ENV }}" > .env
     - run: yarn build
     - run: cd ../ && tar -czf next-speed-dial.tar.gz ./next-speed-dial/
     - run: ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} 'rm -rf ~/next-speed-dial/'
