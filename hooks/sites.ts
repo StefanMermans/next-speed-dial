@@ -135,6 +135,18 @@ const SITES: Site[] = [
     icon: 'images/regexr-logo.png',
     backgroundColor: '#70b1e1',
   },
+  {
+    name: 'Duolingo',
+    url: 'https://www.duolingo.com/learn',
+    icon: 'images/duolingo.svg',
+    backgroundColor: '#58CC02',
+  },
+  {
+    name: 'Aniwave',
+    url: 'https://aniwave.to/home',
+    icon: 'images/aniwave.png',
+    backgroundColor: '#1c1c1c',
+  },
 ];
 
 export default SITES;
