@@ -147,6 +147,12 @@ const SITES: Site[] = [
     icon: 'images/aniwave.png',
     backgroundColor: '#1c1c1c',
   },
+  {
+    name: 'ChatGPT',
+    url: 'https://chat.openai.com',
+    icon: 'images/openai.svg',
+    backgroundColor: '#74AA9C',
+  },
 ];
 
 export default SITES;
