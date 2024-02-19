@@ -139,7 +139,7 @@ const SITES: Site[] = [
     name: 'Duolingo',
     url: 'https://www.duolingo.com/learn',
     icon: 'images/duolingo.svg',
-    backgroundColor: '#58CC02',
+    backgroundColor: '#50c800',
   },
   {
     name: 'Aniwave',
