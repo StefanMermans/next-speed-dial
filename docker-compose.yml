@@ -1,11 +1,8 @@
 version: '3.8'
 
 services:
-  db:
-    container_name: next-speed-dial-db
-    image: mariadb:10.11.2-jammy
-    restart: always
+  web:
+    build: .
     ports:
-      - 28191:3306
-    environment:
-      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - "3000:3000"
+
