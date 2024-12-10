@@ -17,7 +17,7 @@ services:
     links:
       - app
   certbot:
-    image: certbot/certbot:1.7.0
+    image: certbot/certbot:latest
     restart: unless-stopped
     volumes:
       - ./certbot/www:/var/www/certbot/:rw
