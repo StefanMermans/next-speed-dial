@@ -10,7 +10,7 @@ const Clock = dynamic(() => import('../components/Clock/Clock'), { ssr: false })
 import styles from '../css/SpeedDial.module.css';
 import dynamic from 'next/dynamic';
 
-export const Index: NextPage = () => {
+export default function Index() {
   return (
     <main
       className='w-screen h-screen flex flex-col bg-no-repeat bg-center bg-cover overflow-x-hidden'
@@ -37,6 +37,4 @@ export const Index: NextPage = () => {
       </div>
     </main>
   );
-};
-
-export default Index;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import type { Site as SiteType } from '../../hooks/useSiteList';
 import classNames from 'classnames';
 
@@ -11,7 +11,7 @@ export const Site = (props: Props) => {
   const backgroundColor = props.site.backgroundColor || 'white';
 
   return (
-    <a
+    (<a
       href={props.site.url}
       className={classNames(
         { 'p-2': !props.site.noPadding },
@@ -30,7 +30,16 @@ export const Site = (props: Props) => {
       )}
       style={{ backgroundColor }}
     >
-      <Image src={`/${props.site.icon}`} layout='responsive' alt='site icon' width={1} height={1} />
-    </a>
+      <Image
+        src={`/${props.site.icon}`}
+        alt='site icon'
+        width={1}
+        height={1}
+        sizes="100vw"
+        style={{
+          width: "100%",
+          height: "auto"
+        }} />
+    </a>)
   );
 };

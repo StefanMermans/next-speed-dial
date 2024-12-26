@@ -6,7 +6,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const queryClient = new QueryClient();
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   useServiceWorker();
 
   return (
@@ -16,5 +16,3 @@ function MyApp({ Component, pageProps }: AppProps) {
     </QueryClientProvider>
   );
 }
-
-export default MyApp;

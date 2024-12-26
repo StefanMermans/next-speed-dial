@@ -1,8 +1,7 @@
-import { NextPage } from 'next';
 import useShows from '../hooks/useShows';
 import Thumbnail from '../components/Shows/thumbnail';
 
-export const Shows: NextPage = () => {
+export default function Shows() {
   const shows = useShows();
 
   return (
@@ -14,6 +13,4 @@ export const Shows: NextPage = () => {
       </section>
     </main>
   );
-};
-
-export default Shows;
+}
