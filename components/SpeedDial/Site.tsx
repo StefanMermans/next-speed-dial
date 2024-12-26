@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import type { Site as SiteType } from '../../hooks/useSiteList';
 import classNames from 'classnames';
 

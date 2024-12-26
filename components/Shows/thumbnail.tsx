@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { useMemo } from 'react';
 import ShowModel from '../../models/ShowModel';
 
