@@ -35,8 +35,12 @@ export default function Clock() {
 
   return (
     <div className='text-white flex-shrink-0 flex flex-col justify-end'>
-      <time className='text-9xl font-thin' suppressHydrationWarning>{TimeFormatter.format(date)}</time>
-      <time className='text-4xl font-light' suppressHydrationWarning>{DateFormatter.format(date)}</time>
+      <time className='text-9xl font-thin' suppressHydrationWarning>
+        {TimeFormatter.format(date)}
+      </time>
+      <time className='text-4xl font-light' suppressHydrationWarning>
+        {DateFormatter.format(date)}
+      </time>
     </div>
   );
 }
