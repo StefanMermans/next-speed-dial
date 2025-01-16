@@ -4,6 +4,7 @@ import cn from 'classnames';
 import styles from './SpeedDial.module.css';
 import { SiteList } from '@/components/SiteList';
 import Clock from '@/components/Clock';
+import RegisterServiceWorker from '@/components/RegisterServiceWorker';
 
 export default function Index() {
   return (
@@ -24,6 +25,7 @@ export default function Index() {
           </div>
         </div>
       </div>
+      <RegisterServiceWorker />
     </main>
   );
 }
