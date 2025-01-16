@@ -153,6 +153,12 @@ const SITES: Site[] = [
     icon: 'images/openai.svg',
     backgroundColor: '#74AA9C',
   },
+  {
+    name: 'Home Assistant',
+    url: 'https://home-assistant.spyx.family',
+    icon: 'images/home-assistant.svg',
+    backgroundColor: '#41BDF5',
+  }
 ];
 
 export default SITES;
