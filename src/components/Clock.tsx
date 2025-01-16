@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const TimeFormatter = Intl.DateTimeFormat('nl', {
   timeStyle: 'short',
@@ -13,8 +13,8 @@ const DateFormatter = Intl.DateTimeFormat('nl', {
 });
 
 export default function Clock() {
-  const [date, setDate] = useState(new Date());
-
+  const [date, setDate] = useState<Date>(new Date());
+    
   useEffect(() => {
     const intervalId = setInterval(() => {
       setDate((date) => {
@@ -33,14 +33,15 @@ export default function Clock() {
     };
   }, []);
 
-  return (
-    <div className='text-white flex-shrink-0 flex flex-col justify-end'>
+    
+    return (
+        <div className='text-white flex-shrink-0 flex flex-col justify-end'>
       <time className='text-9xl font-thin'>
-        {TimeFormatter.format(date)}
+        {date && TimeFormatter.format(date)}
       </time>
       <time className='text-4xl font-light'>
-        {DateFormatter.format(date)}
+        {date && DateFormatter.format(date)}
       </time>
     </div>
-  );
+    );
 }

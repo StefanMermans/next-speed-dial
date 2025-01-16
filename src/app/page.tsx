@@ -3,8 +3,8 @@ import cn from 'classnames';
 
 import styles from './SpeedDial.module.css';
 import { SiteList } from '@/components/SiteList';
-import Clock from '@/components/Clock';
 import RegisterServiceWorker from '@/components/RegisterServiceWorker';
+import DynamicNoSRRClock from '@/components/DynamicNoSRRClock';
 
 export default function Index() {
   return (
@@ -21,7 +21,7 @@ export default function Index() {
         </div>
         <div className={styles.footer}>
           <div className='w-full flex justify-between col-span-full'>
-            <Clock />
+            <DynamicNoSRRClock />
           </div>
         </div>
       </div>
