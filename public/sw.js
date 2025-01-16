@@ -34,9 +34,6 @@ function shouldCache(url) {
 
 self.addEventListener('fetch', function (event) {
   if (shouldCache(event.request.url)) {
-    console.debug('CACHING: ', event.request.url);
     cacheFetch(event);
-  } else {
-    console.debug('NO-CACHE: ', event.request.url);
   }
 });
